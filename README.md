@@ -8,6 +8,8 @@ The base for the other main types such as ingredients, locations, and recipes.
 
 #### Description
 
+#### Icon
+
 #### Image
 
 ## Ingredients
