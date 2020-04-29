@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Chicken",
+    "description": "Delicious!",
+    "image": "./images/Lavender.jpg"
+  },
+  {
+    "title": "Lavender",
+    "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
+    "image": "./images/Lavender.jpg"
+  }
+]
