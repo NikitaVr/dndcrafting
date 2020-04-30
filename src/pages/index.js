@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import { ListGroup } from "react-bootstrap"
-import Article from ""
 
 import Layout from "../templates/Layout/"
 
