@@ -36,8 +36,17 @@ const Nav = props => {
             </Link>
           </li>
           <li class="nav-item active">
-            <Link className="nav-link" to="/about">
-              About
+            <a
+              className="nav-link"
+              target="_blank"
+              href="https://github.com/NikitaVr/dndcrafting"
+            >
+              Contribute
+            </a>
+          </li>
+          <li class="nav-item active">
+            <Link className="nav-link" to="/">
+              Team
             </Link>
           </li>
         </ul>

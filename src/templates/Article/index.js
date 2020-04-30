@@ -1,8 +1,14 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 const Article = props => {
   const { children, title } = props
   return (
     <div class="container h-100 pt-5">
+      <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <title>{title}</title>
+      </Helmet>
       <div class="pb-2">
         <h1>{title}</h1>
       </div>
