@@ -1,8 +1,9 @@
 [
   {
-    "title": "Calming Chicken",
-    "description": "Chicken that tastes great, and gives you a sense of zen.",
+    "title": "Lavender Tea",
+    "description": "A soothing tea with a light smell.",
+    "effect": "+1d4 on next Wisdom Check",
     "image": "./images/Lavender.jpg",
-    "ingredients": ["Chicken", "Lavender"]
+    "ingredients": ["Water", "Lavender"]
   }
 ]

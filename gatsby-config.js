@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/dndcrafting",
   plugins: [
     {
       resolve: `gatsby-plugin-sharp`,

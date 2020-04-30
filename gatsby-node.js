@@ -47,6 +47,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         edges {
           node {
             title
+            ingredients
           }
         }
       }
@@ -67,14 +68,39 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     },
   })
 
-  locations.data.allLocationsJson.edges.forEach(edge => {
+  // will this being async be a problem ???
+  locations.data.allLocationsJson.edges.forEach(async edge => {
     const location = edge.node
+
+    const ingredientsResult = await graphql(`
+      {
+        allIngredientsJson(filter: { title: { in: [${location.ingredients
+          .map(title => '"' + title + '"')
+          .join(",")}] } }) {
+          edges {
+            node {
+              title
+              rarity
+            }
+          }
+        }
+      }
+    `)
+
+    const ingredients = ingredientsResult.data.allIngredientsJson.edges.map(
+      edge => {
+        return edge.node
+      }
+    )
+
+    console.log(ingredients)
 
     createPage({
       path: `/locations/${slug.convertToSlug(location.title)}/`,
       component: require.resolve("./src/templates/Location.js"),
       context: {
         title: location.title,
+        ingredients: ingredients,
       },
     })
   })

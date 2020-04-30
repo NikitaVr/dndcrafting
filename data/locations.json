@@ -1,8 +1,8 @@
 [
   {
-    "title": "Decidous Forest",
+    "title": "Deciduous Forest",
     "description": "Calming and mysterious",
     "image": "./images/Lavender.jpg",
-    "ingredients": ["Lavender"]
+    "ingredients": ["Acorns", "Lavender"]
   }
 ]

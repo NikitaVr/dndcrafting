@@ -9,6 +9,7 @@ export const query = graphql`
     ingredientsJson(title: { eq: $title }) {
       title
       description
+      rarity
       image {
         childImageSharp {
           fluid {
@@ -25,15 +26,20 @@ const Ingredient = ({ data }) => {
 
   return (
     <Layout>
-      <Article>
-        <div>
-          <h1>{ingredient.title}</h1>
-          <Image
-            fluid={ingredient.image.childImageSharp.fluid}
-            alt={ingredient.title}
-            style={{ float: "left", marginRight: "1rem", width: 150 }}
-          />
-          <div dangerouslySetInnerHTML={{ __html: ingredient.description }} />
+      <Article title={ingredient.title}>
+        <Image
+          fluid={ingredient.image.childImageSharp.fluid}
+          alt={ingredient.title}
+          style={{
+            float: "left",
+            margin: "0rem 1rem 0rem 2rem",
+            width: 150,
+          }}
+        />
+        <h4>Rarity: {ingredient.rarity}</h4>
+        <div dangerouslySetInnerHTML={{ __html: ingredient.description }} />
+        <div class="w-100">
+          <h2>Recipes</h2>
         </div>
       </Article>
     </Layout>

@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 const Nav = props => {
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        DnD Recipes
+      <a class="navbar-brand" href="/">
+        DnD Crafting
       </a>
       <button
         class="navbar-toggler"
@@ -33,6 +33,11 @@ const Nav = props => {
           <li class="nav-item active">
             <Link className="nav-link" to="/recipes">
               Recipes
+            </Link>
+          </li>
+          <li class="nav-item active">
+            <Link className="nav-link" to="/about">
+              About
             </Link>
           </li>
         </ul>

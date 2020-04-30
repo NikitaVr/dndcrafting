@@ -2,25 +2,31 @@ import React from "react"
 import { Link } from "gatsby"
 import { convertToSlug } from "../utils/slug"
 import Layout from "./Layout/"
+import Article from "./Article/"
+import { ListGroup } from "react-bootstrap"
 
 const Ingredients = props => {
   const { pageContext } = props
   const { ingredients } = pageContext
   return (
     <Layout>
-      <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
-        <ul>
-          {ingredients.map((item, index) => {
-            return (
-              <li key={`link_${index}`}>
+      <Article title="Ingredients">
+        <div>
+          <ListGroup>
+            {ingredients.map((item, index) => {
+              return (
                 <Link to={"/ingredients/" + convertToSlug(item.title)}>
-                  {item.title}
+                  <ListGroup.Item action>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">{item.title}</h5>
+                    </div>
+                  </ListGroup.Item>
                 </Link>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
+              )
+            })}
+          </ListGroup>
+        </div>
+      </Article>
     </Layout>
   )
 }
