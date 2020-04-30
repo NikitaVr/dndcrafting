@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{RXBc:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),r=n("qhky"),c=n("O8qb");t.default=function(){return l.a.createElement("div",null,l.a.createElement(c.a,null,l.a.createElement(r.a,null,l.a.createElement("html",{lang:"en"}),l.a.createElement("meta",{charSet:"utf-8"}),l.a.createElement("title",null,"DnD Crafting")),"Hello world!"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-ddc582ba4bcd2ececd37.js.map
