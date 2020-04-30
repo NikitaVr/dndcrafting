@@ -112,6 +112,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         edges {
           node {
             title
+            ingredients
           }
         }
       }
@@ -132,14 +133,36 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     },
   })
 
-  recipes.data.allRecipesJson.edges.forEach(edge => {
+  recipes.data.allRecipesJson.edges.forEach(async edge => {
     const recipe = edge.node
+
+    const ingredientsResult = await graphql(`
+      {
+        allIngredientsJson(filter: { title: { in: [${recipe.ingredients
+          .map(title => '"' + title + '"')
+          .join(",")}] } }) {
+          edges {
+            node {
+              title
+              rarity
+            }
+          }
+        }
+      }
+    `)
+
+    const ingredients = ingredientsResult.data.allIngredientsJson.edges.map(
+      edge => {
+        return edge.node
+      }
+    )
 
     createPage({
       path: `/recipes/${slug.convertToSlug(recipe.title)}/`,
       component: require.resolve("./src/templates/Recipe.js"),
       context: {
         title: recipe.title,
+        ingredients: ingredients,
       },
     })
   })
