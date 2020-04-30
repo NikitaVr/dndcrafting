@@ -27,15 +27,17 @@ const Ingredient = ({ data }) => {
   return (
     <Layout>
       <Article title={ingredient.title}>
-        <Image
-          fluid={ingredient.image.childImageSharp.fluid}
-          alt={ingredient.title}
-          style={{
-            float: "left",
-            margin: "0rem 1rem 0rem 2rem",
-            width: 150,
-          }}
-        />
+        <div style={{ height: "200px" }}>
+          <Image
+            fluid={ingredient.image.childImageSharp.fluid}
+            alt={ingredient.title}
+            style={{ maxHeight: "100%" }}
+            imgStyle={{
+              objectFit: "contain",
+              height: "16em",
+            }}
+          />
+        </div>
         <h4>Rarity: {ingredient.rarity}</h4>
         <div dangerouslySetInnerHTML={{ __html: ingredient.description }} />
         <div class="w-100">

@@ -31,15 +31,17 @@ const Recipe = ({ data, pageContext }) => {
   return (
     <Layout>
       <Article title={recipe.title}>
-        <Image
-          fluid={recipe.image.childImageSharp.fluid}
-          alt={recipe.title}
-          style={{
-            // float: "left",
-            margin: "0rem 1rem 0rem 2rem",
-            width: 150,
-          }}
-        />
+        <div style={{ height: "200px" }}>
+          <Image
+            fluid={recipe.image.childImageSharp.fluid}
+            alt={recipe.title}
+            style={{ maxHeight: "100%" }}
+            imgStyle={{
+              objectFit: "contain",
+              height: "16em",
+            }}
+          />
+        </div>
         <h4>Effect: {recipe.effect}</h4>
         <div dangerouslySetInnerHTML={{ __html: recipe.description }} />
         <div class="w-100">

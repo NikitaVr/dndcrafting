@@ -30,15 +30,14 @@ const Location = ({ data, pageContext }) => {
   return (
     <Layout>
       <Article title={location.title}>
-        <div>
+        <div style={{ height: "200px" }}>
           <Image
             fluid={location.image.childImageSharp.fluid}
             alt={location.title}
-            style={{
-              margin: "0rem 2rem 0rem 2rem",
-              maxWidth: "100%",
-              maxHeight: "200px",
-              objectFit: "cover",
+            style={{ maxHeight: "100%" }}
+            imgStyle={{
+              objectFit: "contain",
+              height: "16em",
             }}
           />
           <div dangerouslySetInnerHTML={{ __html: location.description }} />
