@@ -40,8 +40,8 @@ const Location = ({ data, pageContext }) => {
               height: "16em",
             }}
           />
-          <div dangerouslySetInnerHTML={{ __html: location.description }} />
         </div>
+        <div dangerouslySetInnerHTML={{ __html: location.description }} />
         <div class="w-100">
           <h2>Ingredients</h2>
           <ListGroup>
