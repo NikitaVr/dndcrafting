@@ -18,7 +18,7 @@
   {
     "title": "Gecko Kebab",
     "description": "Not a lot of meat, but it's nice and chewy.",
-    "effect": "+1d2 health",
+    "effect": "Heal for 1d2",
     "image": "./images/Lavender.jpg",
     "ingredients": ["Gecko"],
     "categories": ["Cooking"]

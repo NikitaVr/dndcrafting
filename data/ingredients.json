@@ -6,6 +6,18 @@
     "image": "./images/Lavender.jpg"
   },
   {
+    "title": "Rabbit",
+    "description": "Delicious!",
+    "rarity": "Uncommon",
+    "image": "./images/Lavender.jpg"
+  },
+  {
+    "title": "Venison",
+    "description": "Delicious!",
+    "rarity": "Uncommon",
+    "image": "./images/Lavender.jpg"
+  },
+  {
     "title": "Gecko",
     "description": "Very fast and sneaky.",
     "rarity": "Uncommon",
@@ -18,9 +30,29 @@
     "image": "./images/acorn.jpg"
   },
   {
+    "title": "Poison Berries",
+    "rarity": "Uncommon",
+    "description": "Looks tasty, but will in fact make you sick.",
+    "image": "./images/Lavender.jpg"
+  },
+
+  {
+    "title": "Blueberries",
+    "rarity": "Uncommon",
+    "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
+    "image": "./images/Lavender.jpg"
+  },
+  {
     "title": "Lavender",
     "rarity": "Uncommon",
     "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
+    "image": "./images/Lavender.jpg"
+  },
+
+  {
+    "title": "Mint",
+    "rarity": "Uncommon",
+    "description": "Smells nice",
     "image": "./images/Lavender.jpg"
   },
   {
