@@ -1,8 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "./Layout/"
 import Article from "./Article/"
+import { convertToSlug } from "../utils/slug"
+import { ListGroup } from "react-bootstrap"
 
 export const query = graphql`
   query($title: String!) {
@@ -21,8 +24,9 @@ export const query = graphql`
   }
 `
 
-const Ingredient = ({ data }) => {
+const Ingredient = ({ data, pageContext }) => {
   const ingredient = data.ingredientsJson
+  const { recipes } = pageContext
 
   return (
     <Layout>
@@ -42,6 +46,19 @@ const Ingredient = ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: ingredient.description }} />
         <div class="w-100">
           <h2>Recipes</h2>
+          <ListGroup>
+            {recipes &&
+              recipes.map(item => (
+                <Link to={`/recipes/${convertToSlug(item.title)}`}>
+                  <ListGroup.Item action>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">{item.title}</h5>
+                      {/*<small>3 days ago</small>*/}
+                    </div>
+                  </ListGroup.Item>
+                </Link>
+              ))}
+          </ListGroup>
         </div>
       </Article>
     </Layout>
