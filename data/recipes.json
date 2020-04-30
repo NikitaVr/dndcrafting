@@ -4,6 +4,7 @@
     "description": "A soothing tea with a light smell.",
     "effect": "+1d4 on next Wisdom Check",
     "image": "./images/Lavender.jpg",
-    "ingredients": ["Water", "Lavender"]
+    "ingredients": ["Water", "Lavender"],
+    "categories": ["Cooking"]
   }
 ]
