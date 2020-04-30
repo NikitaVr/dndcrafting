@@ -28,5 +28,17 @@ module.exports = {
     "gatsby-transformer-json",
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `DndCrafting`,
+        short_name: `DndCrafting`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
