@@ -6,6 +6,9 @@
 
 module.exports = {
   pathPrefix: "/dndcrafting",
+  siteMetadata: {
+    siteUrl: `https://www.example.com`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-sharp`,
@@ -24,5 +27,6 @@ module.exports = {
     },
     "gatsby-transformer-json",
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sitemap`,
   ],
 }
