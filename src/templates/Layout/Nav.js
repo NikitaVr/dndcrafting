@@ -21,11 +21,6 @@ const Nav = props => {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <Link className="nav-link" to="/ingredients">
-              Ingredients
-            </Link>
-          </li>
-          <li class="nav-item active">
             <Link className="nav-link" to="/locations">
               Locations
             </Link>
@@ -33,6 +28,11 @@ const Nav = props => {
           <li class="nav-item active">
             <Link className="nav-link" to="/recipes">
               Recipes
+            </Link>
+          </li>
+          <li class="nav-item active">
+            <Link className="nav-link" to="/ingredients">
+              Ingredients
             </Link>
           </li>
           <li class="nav-item active">

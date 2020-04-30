@@ -5,7 +5,6 @@
  */
 
 module.exports = {
-  pathPrefix: "/dndcrafting",
   siteMetadata: {
     siteUrl: `https://www.example.com`,
   },
