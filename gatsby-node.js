@@ -36,7 +36,8 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       allRecipesJson(filter: {ingredients:  {in: ["${ingredient.title}"]}}) {
         edges {
           node {
-            title
+            title,
+            effect
           }
         }
       }
@@ -46,6 +47,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     const recipes = recipesResult.data.allRecipesJson.edges.map(edge => {
       return edge.node
     })
+
+    console.log("RECIPES!!!!!!!!!!!!!!!")
+    console.log(recipes)
 
     createPage({
       path: `/ingredients/${slug.convertToSlug(ingredient.title)}/`,

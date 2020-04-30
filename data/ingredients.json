@@ -6,6 +6,12 @@
     "image": "./images/Lavender.jpg"
   },
   {
+    "title": "Gecko",
+    "description": "Very fast and sneaky.",
+    "rarity": "Uncommon",
+    "image": "./images/Lavender.jpg"
+  },
+  {
     "title": "Acorns",
     "rarity": "Common",
     "description": "<p>the fruit of the oak tree, a smooth oval nut in a rough cup-shaped base. Makes for a <b>hearty</b> meal.</p>",
@@ -15,6 +21,12 @@
     "title": "Lavender",
     "rarity": "Uncommon",
     "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
+    "image": "./images/Lavender.jpg"
+  },
+  {
+    "title": "Hot Pepper",
+    "rarity": "Uncommon",
+    "description": "A Spicy red pepper",
     "image": "./images/Lavender.jpg"
   },
   {

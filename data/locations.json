@@ -4,5 +4,11 @@
     "description": "Calming and mysterious",
     "image": "./images/Lavender.jpg",
     "ingredients": ["Acorns", "Lavender"]
+  },
+  {
+    "title": "Desert",
+    "description": "The heat leaves you wanting for water.",
+    "image": "./images/Lavender.jpg",
+    "ingredients": ["Gecko"]
   }
 ]

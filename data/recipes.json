@@ -6,5 +6,21 @@
     "image": "./images/Lavender.jpg",
     "ingredients": ["Water", "Lavender"],
     "categories": ["Cooking"]
+  },
+  {
+    "title": "Spicy Wings",
+    "description": "Chicken wings cooked in spicy peppers for that finger licking goodness.",
+    "effect": "+1d4 on next Attack Role",
+    "image": "./images/Lavender.jpg",
+    "ingredients": ["Hot Pepper", "Chicken"],
+    "categories": ["Cooking"]
+  },
+  {
+    "title": "Gecko Kebab",
+    "description": "Not a lot of meat, but it's nice and chewy.",
+    "effect": "+1d2 health",
+    "image": "./images/Lavender.jpg",
+    "ingredients": ["Gecko"],
+    "categories": ["Cooking"]
   }
 ]
