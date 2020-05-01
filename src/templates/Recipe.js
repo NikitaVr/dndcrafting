@@ -12,7 +12,7 @@ export const query = graphql`
     recipesJson(title: { eq: $title }) {
       title
       description
-      effect
+      effects
       image {
         childImageSharp {
           fluid {
@@ -42,7 +42,12 @@ const Recipe = ({ data, pageContext }) => {
             }}
           />
         </div>
-        <h4>Effect: {recipe.effect}</h4>
+        <h4>Effects</h4>
+        <ul>
+          {recipe.effects.map(e => (
+            <li>{e}</li>
+          ))}
+        </ul>
         <div dangerouslySetInnerHTML={{ __html: recipe.description }} />
         <div class="w-100">
           <h2>Ingredients</h2>

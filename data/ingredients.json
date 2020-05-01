@@ -54,7 +54,6 @@
     "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
     "image": "./images/Lavender.jpg"
   },
-
   {
     "title": "Mint",
     "rarity": "Uncommon",
@@ -70,6 +69,18 @@
   {
     "title": "Water",
     "description": "Essential",
+    "rarity": "Common",
+    "image": "./images/water.jpg"
+  },
+  {
+    "title": "Flower",
+    "description": "Common Baking Supply",
+    "rarity": "Common",
+    "image": "./images/water.jpg"
+  },
+  {
+    "title": "Yeast",
+    "description": "Common Baking Supply",
     "rarity": "Common",
     "image": "./images/water.jpg"
   }

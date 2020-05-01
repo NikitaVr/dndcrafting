@@ -37,7 +37,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         edges {
           node {
             title,
-            effect
+            effects
           }
         }
       }

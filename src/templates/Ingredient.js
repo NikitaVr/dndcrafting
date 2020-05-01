@@ -56,7 +56,7 @@ const Ingredient = ({ data, pageContext }) => {
                       {/*<small>3 days ago</small>*/}
                     </div>
                     <div class="d-flex w-100 justify-content-between">
-                      <p>Effect: {item.effect}</p>
+                      <p>Effects: {item.effects.join(",")}</p>
                     </div>
                   </ListGroup.Item>
                 </Link>
