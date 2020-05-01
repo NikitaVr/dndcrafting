@@ -48,9 +48,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       return edge.node
     })
 
-    console.log("RECIPES!!!!!!!!!!!!!!!")
-    console.log(recipes)
-
     createPage({
       path: `/ingredients/${slug.convertToSlug(ingredient.title)}/`,
       component: require.resolve("./src/templates/Ingredient.js"),
@@ -113,8 +110,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         return edge.node
       }
     )
-
-    console.log(ingredients)
 
     createPage({
       path: `/locations/${slug.convertToSlug(location.title)}/`,
