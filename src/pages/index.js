@@ -12,21 +12,21 @@ export default () => (
         <Link to="/locations/">
           <ListGroup.Item action>
             <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Locations</h5>
+              <h5 class="mb-1">🗺️ Locations</h5>
             </div>
           </ListGroup.Item>
         </Link>
         <Link to="/recipes/">
           <ListGroup.Item action>
             <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Recipes</h5>
+              <h5 class="mb-1">🍳 Recipes</h5>
             </div>
           </ListGroup.Item>
         </Link>
         <Link to="/ingredients/">
           <ListGroup.Item action>
             <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Ingredients</h5>
+              <h5 class="mb-1">🌾 Ingredients</h5>
             </div>
           </ListGroup.Item>
         </Link>
