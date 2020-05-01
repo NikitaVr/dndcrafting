@@ -14,7 +14,7 @@ const Layout = props => {
         left: 0,
         backgroundImage:
           //"url(http://www.zingerbugimages.com/backgrounds/tan_parchment_paper_wallpaper_texture_seamless.jpg)",
-          "url(http://www.zingerbugimages.com/backgrounds/off_white_parchment_paper_wallpaper_texture_seamless.jpg)",
+          "url(https://www.zingerbugimages.com/backgrounds/off_white_parchment_paper_wallpaper_texture_seamless.jpg)",
       }}
     >
       <Nav />
