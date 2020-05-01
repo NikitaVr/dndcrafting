@@ -30,14 +30,14 @@ const Location = ({ data, pageContext }) => {
   return (
     <Layout>
       <Article title={location.title}>
-        <div style={{ height: "200px" }}>
+        <div style={{ height: "400px" }}>
           <Image
             fluid={location.image.childImageSharp.fluid}
             alt={location.title}
             style={{ maxHeight: "100%" }}
             imgStyle={{
               objectFit: "contain",
-              height: "16em",
+              height: "100%",
             }}
           />
         </div>

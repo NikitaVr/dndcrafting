@@ -2,7 +2,7 @@
   {
     "title": "Deciduous Forest",
     "description": "Calming and mysterious",
-    "image": "./images/Lavender.jpg",
+    "image": "./images/deciduousForest.jpg",
     "ingredients": [
       "Acorns",
       "Poison Berries",
@@ -14,7 +14,7 @@
   {
     "title": "Desert",
     "description": "The heat leaves you wanting for water.",
-    "image": "./images/Lavender.jpg",
+    "image": "./images/desert.jpg",
     "ingredients": ["Gecko"]
   }
 ]

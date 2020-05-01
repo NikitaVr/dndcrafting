@@ -31,14 +31,14 @@ const Ingredient = ({ data, pageContext }) => {
   return (
     <Layout>
       <Article title={ingredient.title}>
-        <div style={{ height: "200px" }}>
+        <div style={{ height: "400px" }}>
           <Image
             fluid={ingredient.image.childImageSharp.fluid}
             alt={ingredient.title}
             style={{ maxHeight: "100%" }}
             imgStyle={{
               objectFit: "contain",
-              height: "16em",
+              height: "100%",
             }}
           />
         </div>

@@ -3,37 +3,43 @@
     "title": "Chicken",
     "description": "Delicious!",
     "rarity": "Uncommon",
-    "image": "./images/Lavender.jpg"
+    "image": "./images/chicken.png"
   },
   {
     "title": "Rabbit",
     "description": "Delicious!",
     "rarity": "Uncommon",
-    "image": "./images/Lavender.jpg"
+    "image": "./images/rabbit.jpg"
   },
   {
     "title": "Venison",
     "description": "Delicious!",
     "rarity": "Uncommon",
-    "image": "./images/Lavender.jpg"
+    "image": "./images/deer.jpg"
   },
   {
     "title": "Gecko",
     "description": "Very fast and sneaky.",
     "rarity": "Uncommon",
-    "image": "./images/Lavender.jpg"
+    "image": "./images/gecko.jpg"
   },
   {
     "title": "Acorns",
     "rarity": "Common",
-    "description": "<p>the fruit of the oak tree, a smooth oval nut in a rough cup-shaped base. Makes for a <b>hearty</b> meal.</p>",
+    "description": "<p>The fruit of the oak tree, a smooth oval nut in a rough cup-shaped base. Makes for a <b>hearty</b> meal.</p>",
     "image": "./images/acorn.jpg"
+  },
+  {
+    "title": "Chestnuts",
+    "rarity": "Uncommon",
+    "description": "A glossy brown nut that may be roasted and eaten.",
+    "image": "./images/chestnuts.jpg"
   },
   {
     "title": "Poison Berries",
     "rarity": "Uncommon",
     "description": "Looks tasty, but will in fact make you sick.",
-    "image": "./images/Lavender.jpg"
+    "image": "./images/poisonBerries.jpg"
   },
 
   {
@@ -53,18 +59,18 @@
     "title": "Mint",
     "rarity": "Uncommon",
     "description": "Smells nice",
-    "image": "./images/Lavender.jpg"
+    "image": "./images/mint.jpg"
   },
   {
     "title": "Hot Pepper",
     "rarity": "Uncommon",
     "description": "A Spicy red pepper",
-    "image": "./images/Lavender.jpg"
+    "image": "./images/hotPepper.jpg"
   },
   {
     "title": "Water",
     "description": "Essential",
     "rarity": "Common",
-    "image": "./images/Lavender.jpg"
+    "image": "./images/water.jpg"
   }
 ]
