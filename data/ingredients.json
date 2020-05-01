@@ -73,15 +73,15 @@
     "image": "./images/water.jpg"
   },
   {
-    "title": "Flower",
+    "title": "Flour",
     "description": "Common Baking Supply",
     "rarity": "Common",
-    "image": "./images/water.jpg"
+    "image": "./images/flour.jpg"
   },
   {
     "title": "Yeast",
     "description": "Common Baking Supply",
     "rarity": "Common",
-    "image": "./images/water.jpg"
+    "image": "./images/yeast.jpg"
   }
 ]

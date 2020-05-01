@@ -4,6 +4,7 @@
     "description": "A soothing tea with a light smell.",
     "effects": ["+1d4 on next Wisdom Check"],
     "image": "./images/lavenderTea.jpg",
+    "preparationTime": "🔥 Short Rest",
     "ingredients": ["Water", "Lavender"],
     "categories": ["Cooking"]
   },
@@ -12,6 +13,7 @@
     "description": "Chicken wings cooked in spicy peppers for that finger licking goodness.",
     "effects": ["+1d4 on next Attack Role"],
     "image": "./images/spicyWings.jpeg",
+    "preparationTime": "💤 Long Rest",
     "ingredients": ["Hot Pepper", "Chicken"],
     "categories": ["Cooking"]
   },
@@ -20,6 +22,7 @@
     "description": "Not a lot of meat, but it's nice and chewy.",
     "effects": ["Heal for 1d2"],
     "image": "./images/geckoKebab.jpeg",
+    "preparationTime": "🔥 Short Rest",
     "ingredients": ["Gecko"],
     "categories": ["Cooking"]
   },
@@ -28,7 +31,8 @@
     "description": "Makes you feel warm and satisfied.",
     "effects": ["Heal for 1d6", "+1d4 on next constitution check"],
     "image": "./images/blueberryPie.jpg",
-    "ingredients": ["Blueberries", "Flower", "Yeast", "Water"],
+    "preparationTime": "💤Long Rest",
+    "ingredients": ["Blueberries", "Flour", "Yeast", "Water"],
     "categories": ["Cooking"]
   }
 ]
