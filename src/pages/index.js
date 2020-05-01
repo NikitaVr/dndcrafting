@@ -7,6 +7,15 @@ import Layout from "../templates/Layout/"
 
 export default () => (
   <div>
+    <Helmet>
+      <html lang="en" />
+      <meta charSet="utf-8" />
+      <title>D&D Crafting</title>
+      <meta
+        name="description"
+        content="Crafting, Cooking, and Alchemy Ingredients and Locations for Dungeons and Dragons"
+      />
+    </Helmet>
     <Layout>
       <ListGroup>
         <Link to="/locations/">

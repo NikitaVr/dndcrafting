@@ -8,6 +8,10 @@ const Article = props => {
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>{title}</title>
+        <meta
+          name="description"
+          content="Crafting, Cooking, and Alchemy Ingredients and Locations for Dungeons and Dragons"
+        />
       </Helmet>
       <div class="pb-2">
         <h1>{title}</h1>
