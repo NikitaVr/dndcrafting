@@ -5,6 +5,7 @@ import Image from "gatsby-image"
 import Layout from "./Layout/"
 import Article from "./Article/"
 import { convertToSlug } from "../utils/slug"
+import { useMediaQuery } from "../utils/mediaQuery"
 import { ListGroup } from "react-bootstrap"
 
 export const query = graphql`
@@ -28,11 +29,12 @@ export const query = graphql`
 const Recipe = ({ data, pageContext }) => {
   const recipe = data.recipesJson
   const { ingredients } = pageContext
+  const isMobile = useMediaQuery("(min-width: 500px)")
 
   return (
     <Layout>
       <Article title={recipe.title}>
-        <div style={{ height: "400px" }}>
+        <div style={{ height: isMobile ? "400px" : "200px" }}>
           <Image
             fluid={recipe.image.childImageSharp.fluid}
             alt={recipe.title}
