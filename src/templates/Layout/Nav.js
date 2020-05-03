@@ -27,10 +27,10 @@ const Navigation = props => {
             href="https://github.com/NikitaVr/dndcrafting"
             target="_blank"
           >
-            Contribute
+            <span className="nav-link">Contribute</span>
           </Nav.Link>
           <Nav.Link target="_blank" href="https://discord.gg/WUbvxZs">
-            Discord
+            <span className="nav-link">Discord</span>
           </Nav.Link>
           <Nav.Link>
             <Link className="nav-link" to="/">
