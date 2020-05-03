@@ -45,6 +45,15 @@ const Nav = props => {
             </a>
           </li>
           <li class="nav-item active">
+            <a
+              className="nav-link"
+              target="_blank"
+              href="https://discord.gg/WUbvxZs"
+            >
+              Discord
+            </a>
+          </li>
+          <li class="nav-item active">
             <Link className="nav-link" to="/">
               Team
             </Link>
