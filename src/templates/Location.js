@@ -27,12 +27,12 @@ export const query = graphql`
 const Location = ({ data, pageContext }) => {
   const location = data.locationsJson
   const { ingredients } = pageContext
-  const isMobile = useMediaQuery("(min-width: 500px)")
+  const isDesktop = useMediaQuery("(min-width: 500px)")
 
   return (
     <Layout>
       <Article title={location.title}>
-        <div style={{ height: isMobile ? "400px" : "200px" }}>
+        <div style={{ height: isDesktop ? "400px" : "200px" }}>
           <Image
             fluid={location.image.childImageSharp.fluid}
             alt={location.title}
@@ -46,6 +46,7 @@ const Location = ({ data, pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: location.description }} />
         <div class="w-100">
           <h2>Ingredients</h2>
+          <hr class="border-primary"></hr>
           <ListGroup>
             {ingredients &&
               ingredients.map(ing => (
