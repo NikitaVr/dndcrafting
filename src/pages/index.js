@@ -11,7 +11,10 @@ export default () => (
     <Helmet>
       <html lang="en" />
       <meta charSet="utf-8" />
-      <title>D&D Crafting</title>
+      <title>
+        D&D Crafting - A digital toolset for crafting, recipes, ingredients, and
+        locations in Dungeons and Dragons
+      </title>
       <meta
         name="description"
         content="Crafting, Cooking, and Alchemy Ingredients and Locations for Dungeons and Dragons"
