@@ -5,7 +5,7 @@ const Article = props => {
   const { children, title, noHead } = props
   const isDesktop = useMediaQuery("(min-width: 500px)")
   return (
-    <div class={`container h-100 ${isDesktop ? "pt-5" : "pt-2"} px-0`}>
+    <div class={`container ${isDesktop ? "pt-5" : "pt-2"} px-0`}>
       {noHead ? null : (
         <Helmet>
           <html lang="en" />
