@@ -1,4 +1,6 @@
-# dndrecipes
+# dndcrafting
+
+Repository for the site <https://dndcrafting.com/>
 
 ## Objects
 
