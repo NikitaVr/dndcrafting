@@ -27,6 +27,15 @@
     "categories": ["Cooking"]
   },
   {
+    "title": "Cactus Stew",
+    "description": "A desert delight.",
+    "effects": ["Heal for 1d4"],
+    "image": "./images/default.webp",
+    "preparationTime": "🔥 Short Rest",
+    "ingredients": ["Gecko", "Cactus"],
+    "categories": ["Cooking"]
+  },
+  {
     "title": "Blue Berry Pie",
     "description": "Makes you feel warm and satisfied.",
     "effects": ["Heal for 1d6", "+1d4 on next constitution check"],

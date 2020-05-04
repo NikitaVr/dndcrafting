@@ -15,6 +15,6 @@
     "title": "Desert",
     "description": "The heat leaves you wanting for water.",
     "image": "./images/desert.jpg",
-    "ingredients": ["Gecko"]
+    "ingredients": ["Gecko", "Cactus"]
   }
 ]
