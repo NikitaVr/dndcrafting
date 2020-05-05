@@ -1,5 +1,11 @@
 [
   {
+    "title": "Monster Venom",
+    "description": "Gathered from snakes, scorpions, or something worse.",
+    "rarity": "Rare",
+    "image": "./images/yeast.jpg"
+  },
+  {
     "title": "Chicken",
     "description": "Delicious!",
     "rarity": "Uncommon",

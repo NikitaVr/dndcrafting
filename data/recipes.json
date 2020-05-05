@@ -43,5 +43,14 @@
     "preparationTime": "💤Long Rest",
     "ingredients": ["Blueberries", "Flour", "Yeast", "Water"],
     "categories": ["Cooking"]
+  },
+  {
+    "title": "Anti Venom",
+    "description": "Makes you feel warm and satisfied.",
+    "effects": ["Cure Poisoned"],
+    "image": "./images/blueberryPie.jpg",
+    "preparationTime": "💤Long Rest",
+    "ingredients": ["Monster Venom", "Water"],
+    "categories": ["Alchemy"]
   }
 ]
