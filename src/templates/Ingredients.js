@@ -14,7 +14,7 @@ const Ingredients = props => {
   const ingredientsF = ingredients.filter(
     item =>
       !search ||
-      (search && item.title.toLowerCase().includes(search.toLowerCase()))
+      (search && item.name.toLowerCase().includes(search.toLowerCase()))
   )
   return (
     <Layout>
@@ -35,10 +35,10 @@ const Ingredients = props => {
           <ListGroup>
             {ingredientsF.map((item, index) => {
               return (
-                <Link to={"/ingredients/" + convertToSlug(item.title)}>
+                <Link to={"/ingredients/" + convertToSlug(item.name)}>
                   <ListGroup.Item action>
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">{item.title}</h5>
+                      <h5 class="mb-1">{item.name}</h5>
                     </div>
                   </ListGroup.Item>
                 </Link>

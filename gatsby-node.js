@@ -13,36 +13,34 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   //     }
   //   }
   // `)
-  // const ingredients = graphql`
-  //   query {
-  //   allFile(
-  //     filter: { sourceInstanceName: { eq: "ingredients" } }
-  //   ) {
-  //     edges {
-  //       node {
-  //         childMarkdownRemark {
-  //           frontmatter {
-  //             title
-  //             image
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-  // `
-  // createPage({
-  //   path: `/ingredients/`,
-  //   component: require.resolve("./src/templates/Ingredients.js"),
-  //   context: {
-  //     ingredients: ingredients.data.allIngredientsJson.edges.map(edge => {
-  //       const ingredient = edge.node
-  //       return {
-  //         title: ingredient.title,
-  //       }
-  //     }),
-  //   },
-  // })
+
+  const ingredients = await graphql(`
+    query {
+      allFile(filter: { sourceInstanceName: { eq: "ingredients" } }) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  createPage({
+    path: `/ingredients/`,
+    component: require.resolve("./src/templates/Ingredients.js"),
+    context: {
+      ingredients: ingredients.data.allFile.edges.map(edge => {
+        const ingredient = { ...edge.node.childMarkdownRemark.frontmatter }
+        return {
+          name: ingredient.name,
+        }
+      }),
+    },
+  })
   // ingredients.data.allIngredientsJson.edges.forEach(async edge => {
   //   const ingredient = edge.node
   //   const recipesResult = await graphql(`
