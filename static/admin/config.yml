@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: NikitaVr/netlify-test
+  repo: NikitaVr/dndcrafting
 media_folder: static/assets
 public_folder: assets
 
