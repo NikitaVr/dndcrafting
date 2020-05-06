@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: NikitaVr/netlify-test
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    folder: pages
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Intro text, name: intro, widget: text }
+      - { label: Image, name: image, widget: image }
+      - label: "Ingredients"
+        name: "ingredients"
+        widget: "list"
+        field:
+          {
+            label: Ingredient,
+            name: ingredient,
+            widget: relation,
+            collection: ingredients,
+            searchFields: [name, type],
+            valueField: name,
+            displayFields: [name],
+          }
+
+  - label: "Ingredients"
+    name: "ingredients"
+    folder: ingredients
+    create: true
+    fields:
+      - { name: name, label: Name }
+      - { name: type, label: Type }

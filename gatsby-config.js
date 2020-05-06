@@ -37,7 +37,7 @@ module.exports = {
         path: "./data/",
       },
     },
-    "gatsby-transformer-json",
+    // "gatsby-transformer-json",
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sitemap`,
     {
@@ -52,5 +52,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: "images",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+    "gatsby-transformer-remark",
+    `gatsby-plugin-netlify-cms`,
   ],
 }

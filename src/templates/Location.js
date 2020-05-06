@@ -8,21 +8,21 @@ import { convertToSlug } from "../utils/slug"
 import { useMediaQuery } from "../utils/mediaQuery"
 import { ListGroup } from "react-bootstrap"
 
-export const query = graphql`
-  query($title: String!) {
-    locationsJson(title: { eq: $title }) {
-      title
-      description
-      image {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query($title: String!) {
+//     locationsJson(title: { eq: $title }) {
+//       title
+//       description
+//       image {
+//         childImageSharp {
+//           fluid {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 const Location = ({ data, pageContext }) => {
   const location = data.locationsJson
