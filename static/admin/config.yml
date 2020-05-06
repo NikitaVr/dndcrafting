@@ -29,7 +29,7 @@ collections:
 
   - label: "Ingredients"
     name: "ingredients"
-    folder: ingredients
+    folder: content/ingredients
     create: true
     fields:
       - { name: name, label: Name }

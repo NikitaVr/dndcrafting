@@ -15,22 +15,21 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   // `)
   // const ingredients = graphql`
   //   query {
-  //     allFile(
-  //       filter: { sourceInstanceName: { eq: "content" }, name: { eq: "home" } }
-  //     ) {
-  //       edges {
-  //         node {
-  //           childMarkdownRemark {
-  //             frontmatter {
-  //               title
-  //               intro
-  //               image
-  //             }
+  //   allFile(
+  //     filter: { sourceInstanceName: { eq: "ingredients" } }
+  //   ) {
+  //     edges {
+  //       node {
+  //         childMarkdownRemark {
+  //           frontmatter {
+  //             title
+  //             image
   //           }
   //         }
   //       }
   //     }
   //   }
+  // }
   // `
   // createPage({
   //   path: `/ingredients/`,
