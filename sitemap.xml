@@ -12,6 +12,7 @@
 <url> <loc>https://www.example.com/ingredients/poison-berries/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.example.com/ingredients/blueberries/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.example.com/ingredients/lavender/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.example.com/ingredients/chamomile/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.example.com/ingredients/mint/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.example.com/ingredients/hot-pepper/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.example.com/ingredients/water/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
