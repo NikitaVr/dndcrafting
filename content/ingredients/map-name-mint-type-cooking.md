@@ -1,0 +1,4 @@
+---
+name: Mint
+type: cooking
+---
