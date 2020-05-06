@@ -1,7 +1,7 @@
 const slug = require("./src/utils/slug")
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
-  // // INGREDIENTS
+  // INGREDIENTS
   // const ingredients = await graphql(`
   //   {
   //     allIngredientsJson {
@@ -13,6 +13,25 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   //     }
   //   }
   // `)
+  // const ingredients = graphql`
+  //   query {
+  //     allFile(
+  //       filter: { sourceInstanceName: { eq: "content" }, name: { eq: "home" } }
+  //     ) {
+  //       edges {
+  //         node {
+  //           childMarkdownRemark {
+  //             frontmatter {
+  //               title
+  //               intro
+  //               image
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `
   // createPage({
   //   path: `/ingredients/`,
   //   component: require.resolve("./src/templates/Ingredients.js"),
