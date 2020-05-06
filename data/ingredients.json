@@ -67,6 +67,12 @@
     "image": "./images/Lavender.jpg"
   },
   {
+    "title": "Chamomile",
+    "rarity": "Uncommon",
+    "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
+    "image": "./images/Lavender.jpg"
+  },
+  {
     "title": "Mint",
     "rarity": "Uncommon",
     "description": "Smells nice",
