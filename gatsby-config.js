@@ -23,20 +23,64 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
-      },
-    },
-    "gatsby-transformer-sharp",
-    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
       options: {
-        path: "./data/",
+        path: `${__dirname}/static/img`,
+        name: "images",
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `ingredients`,
+        path: `${__dirname}/content/ingredients`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `recipes`,
+        path: `${__dirname}/content/recipes`,
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: "./data/",
+    //   },
+    // },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-relative-images",
+            options: {
+              name: "uploads",
+            },
+          },
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 2048,
+            },
+          },
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              destinationDir: "static",
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-remark-source-name`,
     // "gatsby-transformer-json",
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sitemap`,
@@ -52,29 +96,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/static/assets`,
-        name: "images",
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/content/pages`,
-      },
-    },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `ingredients`,
-        path: `${__dirname}/content/ingredients`,
-      },
-    },
-    "gatsby-transformer-remark",
     `gatsby-plugin-netlify-cms`,
   ],
 }

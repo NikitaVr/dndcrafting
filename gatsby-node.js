@@ -1,3 +1,4 @@
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 const slug = require("./src/utils/slug")
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
@@ -41,32 +42,43 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       }),
     },
   })
-  // ingredients.data.allIngredientsJson.edges.forEach(async edge => {
-  //   const ingredient = edge.node
-  //   const recipesResult = await graphql(`
-  //   {
-  //     allRecipesJson(filter: {ingredients:  {in: ["${ingredient.title}"]}}) {
-  //       edges {
-  //         node {
-  //           title,
-  //           effects
-  //         }
-  //       }
-  //     }
-  //   }
-  //   `)
-  //   const recipes = recipesResult.data.allRecipesJson.edges.map(edge => {
-  //     return edge.node
-  //   })
-  //   createPage({
-  //     path: `/ingredients/${slug.convertToSlug(ingredient.title)}/`,
-  //     component: require.resolve("./src/templates/Ingredient.js"),
-  //     context: {
-  //       title: ingredient.title,
-  //       recipes: recipes,
-  //     },
-  //   })
-  // })
+  ingredients.data.allFile.edges.forEach(async edge => {
+    const ingredient = { ...edge.node.childMarkdownRemark.frontmatter }
+    const recipesResult = await graphql(`
+      {
+        allMarkdownRemark(
+          filter: {
+            fields: { sourceName: { eq: "recipes" } }
+            frontmatter: { ingredients: { in: ["lavender"] } }
+          }
+        ) {
+          totalCount
+          edges {
+            node {
+              frontmatter {
+                name
+                effects
+              }
+              fields {
+                sourceName
+              }
+            }
+          }
+        }
+      }
+    `)
+    const recipes = recipesResult.data.allMarkdownRemark.edges.map(edge => {
+      return edge.node
+    })
+    createPage({
+      path: `/ingredients/${slug.convertToSlug(ingredient.name)}/`,
+      component: require.resolve("./src/templates/Ingredient.js"),
+      context: {
+        name: ingredient.name,
+        recipes: recipes,
+      },
+    })
+  })
   // // LOCATIONS
   // const locations = await graphql(`
   //   {
@@ -179,3 +191,17 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   //   })
   // })
 }
+
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   // const { createNodeField } = actions
+//   fmImagesToRelative(node) // convert image paths for gatsby images
+
+//   // if (node.internal.type === `MarkdownRemark`) {
+//   //   const value = createFilePath({ node, getNode })
+//   //   createNodeField({
+//   //     name: `slug`,
+//   //     node,
+//   //     value,
+//   //   })
+//   // }
+// }

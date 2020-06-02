@@ -1,18 +1,41 @@
 backend:
   name: github
   repo: NikitaVr/dndcrafting
-media_folder: static/assets
-public_folder: assets
+media_folder: static/img
+public_folder: /img
 
 collections:
-  - label: "Pages"
-    name: "pages"
-    folder: content/pages
+  - label: "Ingredients"
+    name: "ingredients"
+    folder: content/ingredients
     create: true
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Intro text, name: intro, widget: text }
+      - {
+          label: "Collection",
+          name: "collection",
+          widget: "hidden",
+          default: "ingredients",
+        }
+      - { name: name, label: Name }
+      - { name: type, label: Type }
       - { label: Image, name: image, widget: image }
+
+  - label: "Recipe"
+    name: "recipe"
+    folder: content/recipes
+    create: true
+    fields:
+      - {
+          label: "Collection",
+          name: "collection",
+          widget: "hidden",
+          default: "recipes",
+        }
+      - { name: name, label: Name }
+      - label: "Effects"
+        name: "effects"
+        widget: "list"
+        field: { label: Effect, name: effect }
       - label: "Ingredients"
         name: "ingredients"
         widget: "list"
@@ -26,11 +49,4 @@ collections:
             valueField: name,
             displayFields: [name],
           }
-
-  - label: "Ingredients"
-    name: "ingredients"
-    folder: content/ingredients
-    create: true
-    fields:
-      - { name: name, label: Name }
-      - { name: type, label: Type }
+      - { label: Image, name: image, widget: image }
