@@ -205,3 +205,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 //   //   })
 //   // }
 // }
+
+exports.onCreateNode = ({ node }) => {
+  fmImagesToRelative(node)
+}

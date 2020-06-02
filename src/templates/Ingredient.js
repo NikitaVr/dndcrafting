@@ -8,6 +8,23 @@ import { convertToSlug } from "../utils/slug"
 import { useMediaQuery } from "../utils/mediaQuery"
 import { ListGroup } from "react-bootstrap"
 
+// export const query = graphql`
+//   query($title: String!) {
+//     ingredientsJson(title: { eq: $title }) {
+//       title
+//       description
+//       rarity
+//       image {
+//         childImageSharp {
+//           fluid {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+
 export const query = graphql`
   query($name: String! = "lavender") {
     markdownRemark(frontmatter: { name: { eq: $name } }) {
@@ -17,18 +34,12 @@ export const query = graphql`
         image
       }
     }
-    imageSharp(fluid: {}) {
-      id
-      fluid {
-        srcWebp
-      }
-    }
   }
 `
 
 const Ingredient = ({ data, pageContext }) => {
   const ingredient = { ...data.markdownRemark.frontmatter }
-  const imageSrc = data.imageSharp.fluid.srcWebp
+  const imageSrc = "/static" + ingredient.image
   console.log("INGREDIENT")
   console.log(ingredient)
   const { recipes } = pageContext

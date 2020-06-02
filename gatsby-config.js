@@ -9,17 +9,33 @@ module.exports = {
     siteUrl: `https://www.example.com`,
   },
   plugins: [
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // The property ID; the tracking code won't be generated without it
+    //     trackingId: "UA-165269148-1",
+    //     // Defines where to place the tracking script - `true` in the head and `false` in the body
+    //     head: true,
+    //     // Setting this parameter is optional
+    //     anonymize: true,
+    //     // Setting this parameter is also optional
+    //     respectDNT: true,
+    //   },
+    // },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-165269148-1",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
+        plugins: [
+          "gatsby-remark-relative-images",
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
       },
     },
     {
@@ -44,42 +60,40 @@ module.exports = {
         path: `${__dirname}/content/recipes`,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {
     //     path: "./data/",
     //   },
     // },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-relative-images",
-            options: {
-              name: "uploads",
-            },
-          },
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 2048,
-            },
-          },
-          {
-            resolve: "gatsby-remark-copy-linked-files",
-            options: {
-              destinationDir: "static",
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: "gatsby-transformer-remark",
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: "gatsby-remark-relative-images",
+    //         options: {
+    //           name: "uploads",
+    //         },
+    //       },
+    //       {
+    //         resolve: "gatsby-remark-images",
+    //         options: {
+    //           // It's important to specify the maxWidth (in pixels) of
+    //           // the content container as this plugin uses this as the
+    //           // base for generating different widths of each image.
+    //           maxWidth: 2048,
+    //         },
+    //       },
+    //       {
+    //         resolve: "gatsby-remark-copy-linked-files",
+    //         options: {
+    //           destinationDir: "static",
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-remark-source-name`,
     // "gatsby-transformer-json",
     "gatsby-plugin-react-helmet",
