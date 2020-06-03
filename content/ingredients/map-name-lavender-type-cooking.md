@@ -1,6 +1,6 @@
 ---
 name: Lavender
 type: Cooking
-rarity: Common
+rarity: Uncommon
 image: /img/lavender.jpg
 ---
