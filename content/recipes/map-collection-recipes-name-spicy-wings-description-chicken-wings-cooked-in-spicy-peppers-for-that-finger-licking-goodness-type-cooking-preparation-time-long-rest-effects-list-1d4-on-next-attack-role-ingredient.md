@@ -5,7 +5,7 @@ description: Chicken wings cooked in spicy peppers for that finger licking goodn
 type: Cooking
 preparation-time: Long Rest
 effects:
-  - +1d4 on Next Attack Role
+  - +1d4 on Next Attack Roll
 ingredients:
   - Chicken
   - Hot Pepper
