@@ -107,48 +107,48 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       }),
     },
   })
-  // // will this being async be a problem ???
-  // locations.data.allFile.edges.forEach(async edge => {
-  //   const location = { ...edge.node.childMarkdownRemark.frontmatter }
-  //   const ingredientsResult = await graphql(`
-  //   {
-  //     allMarkdownRemark(
-  //       filter: {
-  //         fields: { sourceName: { eq: "ingredients" } }
-  //         frontmatter: { name: { in: [${recipe.ingredients
-  //           .map(title => '"' + title + '"')
-  //           .join(",")}] } }
-  //       }
-  //     ) {
-  //       totalCount
-  //       edges {
-  //         node {
-  //           frontmatter {
-  //             name
-  //             effects
-  //           }
-  //           fields {
-  //             sourceName
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  //   const ingredients = ingredientsResult.data.allMarkdownRemark.edges.map(
-  //     edge => {
-  //       return edge.node
-  //     }
-  //   )
-  //   createPage({
-  //     path: `/locations/${slug.convertToSlug(location.title)}/`,
-  //     component: require.resolve("./src/templates/Location.js"),
-  //     context: {
-  //       name: location.name,
-  //       ingredients: ingredients,
-  //     },
-  //   })
-  // })
+  // will this being async be a problem ???
+  locations.data.allFile.edges.forEach(async edge => {
+    const location = { ...edge.node.childMarkdownRemark.frontmatter }
+    // const ingredientsResult = await graphql(`
+    //   {
+    //     allMarkdownRemark(
+    //       filter: {
+    //         fields: { sourceName: { eq: "ingredients" } }
+    //         frontmatter: { name: { in: [${recipe.ingredients
+    //           .map(title => '"' + title + '"')
+    //           .join(",")}] } }
+    //       }
+    //     ) {
+    //       totalCount
+    //       edges {
+    //         node {
+    //           frontmatter {
+    //             name
+    //             effects
+    //           }
+    //           fields {
+    //             sourceName
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // `)
+    // const ingredients = ingredientsResult.data.allMarkdownRemark.edges.map(
+    //   edge => {
+    //     return edge.node
+    //   }
+    // )
+    createPage({
+      path: `/locations/${slug.convertToSlug(location.name)}/`,
+      component: require.resolve("./src/templates/Location.js"),
+      context: {
+        name: location.name,
+        // ingredients: ingredients,
+      },
+    })
+  })
   // // RECIPES
   const recipes = await graphql(`
     query {
