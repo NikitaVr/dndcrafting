@@ -54,7 +54,7 @@ export default () => (
         <div>
           <img src={login2Image} alt="Login2" />
         </div>
-        <h2>Edit Collections</h2>
+        <h2>2. Edit Collections</h2>
         <p>
           Once you are logged in, you can click on Ingredients, Recipes, or
           Locations to add new entries or edit existing ones.{" "}
@@ -66,7 +66,7 @@ export default () => (
             alt="Login2"
           />
         </div>
-        <h2>New Ingredient</h2>
+        <h2>3. New Ingredient</h2>
         <h4>Create</h4>
         <p>Click on "New Ingredients" to add a new ingredient.</p>
         <div>
