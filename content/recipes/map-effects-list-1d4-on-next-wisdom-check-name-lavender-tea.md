@@ -7,6 +7,6 @@ preparation-time: Short Rest
 effects:
   - +1d4 on next Wisdom Check
 ingredients:
-  - lavender
+  - Lavender
 image: /img/lavendertea.jpg
 ---
