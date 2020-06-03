@@ -1,6 +1,6 @@
 ---
 collection: ingredients
 name: Rabbit
-type: cooking
+type: Cooking
 image: /img/rabbit.jpg
 ---
