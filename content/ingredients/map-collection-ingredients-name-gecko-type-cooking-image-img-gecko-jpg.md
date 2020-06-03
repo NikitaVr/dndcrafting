@@ -1,6 +1,6 @@
 ---
 collection: ingredients
 name: Gecko
-type: cooking
+type: Cooking
 image: /img/gecko.jpg
 ---
