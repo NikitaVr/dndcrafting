@@ -32,6 +32,8 @@ export const query = graphql`
       id
       frontmatter {
         name
+        description
+        preparation_time
         effects
         image {
           childImageSharp {
@@ -66,7 +68,7 @@ const Recipe = ({ data, pageContext }) => {
             />
           )}
         </div>
-        <h4>Preparation Time: {recipe.preparationTime}</h4>
+        <h4>Preparation Time: {recipe.preparation_time}</h4>
         <h4>Effects</h4>
         <ul>
           {recipe.effects.map(e => (

@@ -37,6 +37,10 @@ collections:
         name: "rarity"
         widget: "select"
         options: ["Common", "Uncommon", "Rare", "Very Rare", "Legendary"]
+      - label: "Preparation Time"
+        name: "preparation-time"
+        widget: "select"
+        options: ["Short Rest", "Long Rest"]
       - label: "Effects"
         name: "effects"
         widget: "list"

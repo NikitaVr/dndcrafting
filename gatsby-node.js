@@ -111,30 +111,30 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   // locations.data.allFile.edges.forEach(async edge => {
   //   const location = { ...edge.node.childMarkdownRemark.frontmatter }
   //   const ingredientsResult = await graphql(`
-  //     {
-  //       allMarkdownRemark(
-  //         filter: {
-  //           fields: { sourceName: { eq: "ingredients" } }
-  //           frontmatter: { name: { in: [${location.ingredients
-  //             .map(title => '"' + title + '"')
-  //             .join(",")}] } }
-  //         }
-  //       ) {
-  //         totalCount
-  //         edges {
-  //           node {
-  //             frontmatter {
-  //               name
-  //               rarity
-  //             }
-  //             fields {
-  //               sourceName
-  //             }
+  //   {
+  //     allMarkdownRemark(
+  //       filter: {
+  //         fields: { sourceName: { eq: "ingredients" } }
+  //         frontmatter: { name: { in: [${recipe.ingredients
+  //           .map(title => '"' + title + '"')
+  //           .join(",")}] } }
+  //       }
+  //     ) {
+  //       totalCount
+  //       edges {
+  //         node {
+  //           frontmatter {
+  //             name
+  //             effects
+  //           }
+  //           fields {
+  //             sourceName
   //           }
   //         }
   //       }
   //     }
-  //   `)
+  //   }
+  // `)
   //   const ingredients = ingredientsResult.data.allMarkdownRemark.edges.map(
   //     edge => {
   //       return edge.node

@@ -27,6 +27,25 @@ import { ListGroup } from "react-bootstrap"
 //   }
 // `
 
+// export const query = graphql`
+//   query($name: String!) {
+//     markdownRemark(frontmatter: { name: { eq: $name } }) {
+//       id
+//       frontmatter {
+//         name
+//         description
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+
 const Location = ({ data, pageContext }) => {
   const location = data.locationsJson
   const { ingredients } = pageContext
@@ -36,16 +55,17 @@ const Location = ({ data, pageContext }) => {
     <Layout>
       <Article title={location.title}>
         <div style={{ height: isDesktop ? "400px" : "200px" }}>
-          {}
-          <Image
-            fluid={location.image.childImageSharp.fluid}
-            alt={location.title}
-            style={{ maxHeight: "100%" }}
-            imgStyle={{
-              objectFit: "contain",
-              height: "100%",
-            }}
-          />
+          {location.image && (
+            <Image
+              fluid={location.image.childImageSharp.fluid}
+              alt={location.name}
+              style={{ maxHeight: "100%" }}
+              imgStyle={{
+                objectFit: "contain",
+                height: "100%",
+              }}
+            />
+          )}
         </div>
         <div dangerouslySetInnerHTML={{ __html: location.description }} />
         <div class="w-100">
