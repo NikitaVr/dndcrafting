@@ -25,20 +25,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          "gatsby-remark-relative-images",
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-        ],
-      },
-    },
-    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
       options: {
@@ -58,6 +44,20 @@ module.exports = {
       options: {
         name: `recipes`,
         path: `${__dirname}/content/recipes`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          "gatsby-remark-relative-images",
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
       },
     },
     // {
