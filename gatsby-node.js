@@ -195,7 +195,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           node {
             frontmatter {
               name
-              effects
+              rarity
             }
             fields {
               sourceName
