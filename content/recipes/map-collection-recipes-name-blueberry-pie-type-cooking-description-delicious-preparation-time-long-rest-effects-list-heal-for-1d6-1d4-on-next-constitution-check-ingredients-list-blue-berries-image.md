@@ -1,7 +1,7 @@
 ---
 collection: recipes
 name: Blueberry Pie
-description: delicious
+description: Just like grandma used to make.
 type: Cooking
 preparation-time: Long Rest
 effects:
