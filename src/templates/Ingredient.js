@@ -31,7 +31,13 @@ export const query = graphql`
       id
       frontmatter {
         name
-        image
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
@@ -39,7 +45,7 @@ export const query = graphql`
 
 const Ingredient = ({ data, pageContext }) => {
   const ingredient = { ...data.markdownRemark.frontmatter }
-  const imageSrc = "/static" + ingredient.image
+  // const imageSrc = "/static" + ingredient.image
   console.log("INGREDIENT")
   console.log(ingredient)
   const { recipes } = pageContext
@@ -50,7 +56,7 @@ const Ingredient = ({ data, pageContext }) => {
     <Layout>
       <Article title={ingredient.name}>
         <div style={{ height: isDesktop ? "400px" : "200px" }}>
-          <img
+          {/* <img
             src={imageSrc}
             alt={ingredient.name}
             style={{ maxHeight: "100%" }}
@@ -58,8 +64,8 @@ const Ingredient = ({ data, pageContext }) => {
               objectFit: "contain",
               height: "100%",
             }}
-          />
-          {/* <Image
+          /> */}
+          <Image
             fluid={ingredient.image.childImageSharp.fluid}
             alt={ingredient.name}
             style={{ maxHeight: "100%" }}
@@ -67,7 +73,7 @@ const Ingredient = ({ data, pageContext }) => {
               objectFit: "contain",
               height: "100%",
             }}
-          /> */}
+          />
         </div>
         <h4>Rarity: {ingredient.rarity}</h4>
         <div dangerouslySetInnerHTML={{ __html: ingredient.description }} />
