@@ -88,6 +88,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
             childMarkdownRemark {
               frontmatter {
                 name
+                ingredients
               }
             }
           }
@@ -110,42 +111,42 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   // will this being async be a problem ???
   locations.data.allFile.edges.forEach(async edge => {
     const location = { ...edge.node.childMarkdownRemark.frontmatter }
-    // const ingredientsResult = await graphql(`
-    //   {
-    //     allMarkdownRemark(
-    //       filter: {
-    //         fields: { sourceName: { eq: "ingredients" } }
-    //         frontmatter: { name: { in: [${recipe.ingredients
-    //           .map(title => '"' + title + '"')
-    //           .join(",")}] } }
-    //       }
-    //     ) {
-    //       totalCount
-    //       edges {
-    //         node {
-    //           frontmatter {
-    //             name
-    //             effects
-    //           }
-    //           fields {
-    //             sourceName
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // `)
-    // const ingredients = ingredientsResult.data.allMarkdownRemark.edges.map(
-    //   edge => {
-    //     return edge.node
-    //   }
-    // )
+    const ingredientsResult = await graphql(`
+      {
+        allMarkdownRemark(
+          filter: {
+            fields: { sourceName: { eq: "ingredients" } }
+            frontmatter: { name: { in: [${location.ingredients
+              .map(name => '"' + name + '"')
+              .join(",")}] } }
+          }
+        ) {
+          totalCount
+          edges {
+            node {
+              frontmatter {
+                name
+                rarity
+              }
+              fields {
+                sourceName
+              }
+            }
+          }
+        }
+      }
+    `)
+    const ingredients = ingredientsResult.data.allMarkdownRemark.edges.map(
+      edge => {
+        return edge.node
+      }
+    )
     createPage({
       path: `/locations/${slug.convertToSlug(location.name)}/`,
       component: require.resolve("./src/templates/Location.js"),
       context: {
         name: location.name,
-        // ingredients: ingredients,
+        ingredients: ingredients,
       },
     })
   })

@@ -1,6 +1,8 @@
+publish_mode: editorial_workflow
 backend:
   name: github
   repo: NikitaVr/dndcrafting
+  open_authoring: true
 media_folder: static/img
 public_folder: /img
 
