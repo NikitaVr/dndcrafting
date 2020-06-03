@@ -15,10 +15,10 @@ const Locations = props => {
           <ListGroup>
             {locations.map((item, index) => {
               return (
-                <Link to={"/locations/" + convertToSlug(item.title)}>
+                <Link to={"/locations/" + convertToSlug(item.name)}>
                   <ListGroup.Item action>
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">{item.title}</h5>
+                      <h5 class="mb-1">{item.name}</h5>
                     </div>
                   </ListGroup.Item>
                 </Link>

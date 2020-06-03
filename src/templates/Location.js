@@ -9,14 +9,17 @@ import { useMediaQuery } from "../utils/mediaQuery"
 import { ListGroup } from "react-bootstrap"
 
 // export const query = graphql`
-//   query($title: String!) {
-//     locationsJson(title: { eq: $title }) {
-//       title
-//       description
-//       image {
-//         childImageSharp {
-//           fluid {
-//             ...GatsbyImageSharpFluid
+//   query($name: String! = "Lavender Tea") {
+//     markdownRemark(frontmatter: { name: { eq: $name } }) {
+//       id
+//       frontmatter {
+//         name
+//         description
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
 //           }
 //         }
 //       }
@@ -33,6 +36,7 @@ const Location = ({ data, pageContext }) => {
     <Layout>
       <Article title={location.title}>
         <div style={{ height: isDesktop ? "400px" : "200px" }}>
+          {}
           <Image
             fluid={location.image.childImageSharp.fluid}
             alt={location.title}

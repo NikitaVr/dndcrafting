@@ -8,23 +8,6 @@ import { convertToSlug } from "../utils/slug"
 import { useMediaQuery } from "../utils/mediaQuery"
 import { ListGroup } from "react-bootstrap"
 
-// export const query = graphql`
-//   query($title: String!) {
-//     ingredientsJson(title: { eq: $title }) {
-//       title
-//       description
-//       rarity
-//       image {
-//         childImageSharp {
-//           fluid {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
-
 export const query = graphql`
   query($name: String! = "lavender") {
     markdownRemark(frontmatter: { name: { eq: $name } }) {
@@ -65,15 +48,17 @@ const Ingredient = ({ data, pageContext }) => {
               height: "100%",
             }}
           /> */}
-          <Image
-            fluid={ingredient.image.childImageSharp.fluid}
-            alt={ingredient.name}
-            style={{ maxHeight: "100%" }}
-            imgStyle={{
-              objectFit: "contain",
-              height: "100%",
-            }}
-          />
+          {ingredient.image && (
+            <Image
+              fluid={ingredient.image.childImageSharp.fluid}
+              alt={ingredient.name}
+              style={{ maxHeight: "100%" }}
+              imgStyle={{
+                objectFit: "contain",
+                height: "100%",
+              }}
+            />
+          )}
         </div>
         <h4>Rarity: {ingredient.rarity}</h4>
         <div dangerouslySetInnerHTML={{ __html: ingredient.description }} />
