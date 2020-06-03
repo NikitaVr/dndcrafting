@@ -1,6 +1,6 @@
 ---
 collection: ingredients
 name: Acorns
-rarity: Common
+rarity: Uncommon
 image: /img/acorn.jpg
 ---
