@@ -1,5 +1,5 @@
 ---
 name: Lavender
-type: cooking
+type: Cooking
 image: /img/lavender.jpg
 ---
