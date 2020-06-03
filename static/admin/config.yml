@@ -17,7 +17,10 @@ collections:
           default: "ingredients",
         }
       - { name: name, label: Name }
-      - { name: type, label: Type }
+      - label: "Rarity"
+        name: "rarity"
+        widget: "select"
+        options: ["Common", "Uncommon", "Rare", "Very Rare", "Legendary"]
       - { label: Image, name: image, widget: image }
 
   - label: "Recipe"
@@ -33,10 +36,10 @@ collections:
         }
       - { name: name, label: Name }
       - { name: description, label: Description }
-      - label: "Rarity"
-        name: "rarity"
+      - label: "Type"
+        name: "type"
         widget: "select"
-        options: ["Common", "Uncommon", "Rare", "Very Rare", "Legendary"]
+        options: ["Cooking", "Alchemy", "Blacksmith", "Woodworking"]
       - label: "Preparation Time"
         name: "preparation-time"
         widget: "select"

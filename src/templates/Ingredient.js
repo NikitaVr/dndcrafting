@@ -39,15 +39,6 @@ const Ingredient = ({ data, pageContext }) => {
     <Layout>
       <Article title={ingredient.name}>
         <div style={{ height: isDesktop ? "400px" : "200px" }}>
-          {/* <img
-            src={imageSrc}
-            alt={ingredient.name}
-            style={{ maxHeight: "100%" }}
-            imgStyle={{
-              objectFit: "contain",
-              height: "100%",
-            }}
-          /> */}
           {ingredient.image && (
             <Image
               fluid={ingredient.image.childImageSharp.fluid}
