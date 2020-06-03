@@ -10,5 +10,7 @@ ingredients:
   - Rabbit
   - Venison
   - Water
+  - Acorns
+  - Chestnuts
 image: /img/deciduousforest.jpg
 ---
