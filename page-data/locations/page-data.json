@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-locations-js","path":"/locations/","result":{"pageContext":{"locations":[{"title":"Deciduous Forest"},{"title":"Desert"}]}}}
+{"componentChunkName":"component---src-templates-locations-js","path":"/locations/","result":{"pageContext":{"locations":[{"name":"Deciduous Forest"},{"name":"Desert"},{"name":"Town"}]}}}

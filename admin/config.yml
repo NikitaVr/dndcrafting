@@ -1,0 +1,94 @@
+publish_mode: editorial_workflow
+backend:
+  name: github
+  repo: NikitaVr/dndcrafting
+  open_authoring: true
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - label: "Ingredients"
+    name: "ingredients"
+    folder: content/ingredients
+    create: true
+    fields:
+      - {
+          label: "Collection",
+          name: "collection",
+          widget: "hidden",
+          default: "ingredients",
+        }
+      - { name: name, label: Name }
+      - label: "Rarity"
+        name: "rarity"
+        widget: "select"
+        options: ["Common", "Uncommon", "Rare", "Very Rare", "Legendary"]
+      - { label: Image, name: image, widget: image }
+
+  - label: "Recipe"
+    name: "recipe"
+    folder: content/recipes
+    create: true
+    fields:
+      - {
+          label: "Collection",
+          name: "collection",
+          widget: "hidden",
+          default: "recipes",
+        }
+      - { name: name, label: Name }
+      - { name: description, label: Description }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Cooking", "Alchemy", "Blacksmith", "Woodworking"]
+      - label: "Preparation Time"
+        name: "preparation-time"
+        widget: "select"
+        options: ["Short Rest", "Long Rest"]
+      - label: "Effects"
+        name: "effects"
+        widget: "list"
+        field: { label: Effect, name: effect }
+      - label: "Ingredients"
+        name: "ingredients"
+        widget: "list"
+        field:
+          {
+            label: Ingredient,
+            name: ingredient,
+            widget: relation,
+            collection: ingredients,
+            searchFields: [name, type],
+            valueField: name,
+            displayFields: [name],
+          }
+      - { label: Image, name: image, widget: image }
+
+  - label: "Location"
+    name: "location"
+    folder: content/locations
+    create: true
+    fields:
+      - {
+          label: "Collection",
+          name: "collection",
+          widget: "hidden",
+          default: "locations",
+        }
+      - { name: name, label: Name }
+      - { name: description, label: Description }
+      - label: "Ingredients"
+        name: "ingredients"
+        widget: "list"
+        field:
+          {
+            label: Ingredient,
+            name: ingredient,
+            widget: relation,
+            collection: ingredients,
+            searchFields: [name, type],
+            valueField: name,
+            displayFields: [name],
+          }
+      - { label: Image, name: image, widget: image }

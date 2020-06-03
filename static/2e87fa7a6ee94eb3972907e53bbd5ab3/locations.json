@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Deciduous Forest",
+    "description": "Calming and mysterious",
+    "image": "./images/deciduousForest.jpg",
+    "ingredients": [
+      "Acorns",
+      "Poison Berries",
+      "Blueberries",
+      "Lavender",
+      "Chamomile",
+      "Mint",
+      "Water"
+    ]
+  },
+  {
+    "title": "Desert",
+    "description": "The heat leaves you wanting for water.",
+    "image": "./images/desert.jpg",
+    "ingredients": ["Gecko", "Cactus"]
+  }
+]

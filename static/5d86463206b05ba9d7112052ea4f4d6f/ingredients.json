@@ -1,0 +1,111 @@
+[
+  {
+    "title": "Monster Venom",
+    "description": "Gathered from snakes, scorpions, or something worse.",
+    "rarity": "Rare",
+    "image": "./images/yeast.jpg"
+  },
+  {
+    "title": "Chicken",
+    "description": "Delicious!",
+    "rarity": "Uncommon",
+    "image": "./images/chicken.png"
+  },
+  {
+    "title": "Rabbit",
+    "description": "Delicious!",
+    "rarity": "Uncommon",
+    "image": "./images/rabbit.jpg"
+  },
+  {
+    "title": "Venison",
+    "description": "Delicious!",
+    "rarity": "Uncommon",
+    "image": "./images/deer.jpg"
+  },
+  {
+    "title": "Gecko",
+    "description": "Very fast and sneaky.",
+    "rarity": "Uncommon",
+    "image": "./images/gecko.jpg"
+  },
+  {
+    "title": "Cactus",
+    "description": "Prickly but has some a good amount of water inside",
+    "rarity": "Uncommon",
+    "image": "./images/cactus.jpg"
+  },
+  {
+    "title": "Acorns",
+    "rarity": "Common",
+    "description": "<p>The fruit of the oak tree, a smooth oval nut in a rough cup-shaped base. Makes for a <b>hearty</b> meal.</p>",
+    "image": "./images/acorn.jpg"
+  },
+  {
+    "title": "Chestnuts",
+    "rarity": "Uncommon",
+    "description": "A glossy brown nut that may be roasted and eaten.",
+    "image": "./images/chestnuts.jpg"
+  },
+  {
+    "title": "Poison Berries",
+    "rarity": "Uncommon",
+    "description": "Looks tasty, but will in fact make you sick.",
+    "image": "./images/poisonBerries.jpg"
+  },
+
+  {
+    "title": "Blueberries",
+    "rarity": "Uncommon",
+    "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
+    "image": "./images/blueberries.webp"
+  },
+  {
+    "title": "Lavender",
+    "rarity": "Uncommon",
+    "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
+    "image": "./images/Lavender.jpg"
+  },
+  {
+    "title": "Chamomile",
+    "rarity": "Uncommon",
+    "description": "<p>A small aromatic evergreen shrub of the mint family, with narrow leaves and bluish-purple flowers. Lavender has been widely used in <b>perfumery</b> and <b>medicine</b> since ancient times.</p>",
+    "image": "./images/Lavender.jpg"
+  },
+  {
+    "title": "Mint",
+    "rarity": "Uncommon",
+    "description": "Smells nice",
+    "image": "./images/mint.jpg"
+  },
+  {
+    "title": "Hot Pepper",
+    "rarity": "Uncommon",
+    "description": "A Spicy red pepper",
+    "image": "./images/hotPepper.jpg"
+  },
+  {
+    "title": "Water",
+    "description": "Essential",
+    "rarity": "Common",
+    "image": "./images/water.jpg"
+  },
+  {
+    "title": "Flour",
+    "description": "Common Baking Supply",
+    "rarity": "Common",
+    "image": "./images/flour.jpg"
+  },
+  {
+    "title": "Yeast",
+    "description": "Common Baking Supply",
+    "rarity": "Common",
+    "image": "./images/yeast.jpg"
+  },
+  {
+    "title": "Vinegar",
+    "description": "a sour-tasting liquid containing acetic acid, obtained by fermenting dilute alcoholic liquids, typically wine, cider, or beer, and used as a condiment or for pickling.",
+    "rarity": "Common",
+    "image": "./images/yeast.jpg"
+  }
+]

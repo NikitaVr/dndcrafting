@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-recipes-js","path":"/recipes/","result":{"pageContext":{"recipes":[{"title":"Lavender Tea"},{"title":"Spicy Wings"},{"title":"Gecko Kebab"},{"title":"Cactus Stew"},{"title":"Blue Berry Pie"},{"title":"Anti Venom"}]}}}
+{"componentChunkName":"component---src-templates-recipes-js","path":"/recipes/","result":{"pageContext":{"recipes":[{"name":"Blueberry Pie"},{"name":"Anti Venom"},{"name":"Cactus Stew"},{"name":"Gecko Kebab"},{"name":"Lavender Tea"},{"name":"Spicy Wings"}]}}}
