@@ -3,7 +3,12 @@ collection: locations
 name: Deciduous Forest
 description: Calming and mysterious
 ingredients:
-  - lavender
+  - Lavender
   - Mint
+  - Blue Berries
+  - Poison Berries
+  - Rabbit
+  - Venison
+  - Water
 image: /img/deciduousforest.jpg
 ---
