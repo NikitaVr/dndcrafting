@@ -1,6 +1,6 @@
 ---
 collection: ingredients
 name: Cactus
-type: cooking
+type: Cooking
 image: /img/cactus.jpg
 ---
