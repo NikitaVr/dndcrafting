@@ -1,5 +1,5 @@
 ---
 name: Mint
-type: cooking
+type: Cooking
 image: /img/mint.jpg
 ---
