@@ -1,5 +1,5 @@
 ---
 name: Chicken
-type: cooking
+type: Cooking
 image: /img/chicken.png
 ---
