@@ -12,5 +12,7 @@ ingredients:
   - Water
   - Acorns
   - Chestnuts
+  - Owlbear Meat
+  - Glowing Mushrooms
 image: /img/deciduousforest.jpg
 ---
