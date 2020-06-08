@@ -8,6 +8,8 @@ import { convertToSlug } from "../utils/slug"
 import { useMediaQuery } from "../utils/mediaQuery"
 import { ListGroup } from "react-bootstrap"
 
+import _ from "lodash"
+
 // export const query = graphql`
 //   query($name: String! = "Lavender Tea") {
 //     markdownRemark(frontmatter: { name: { eq: $name } }) {
@@ -48,8 +50,17 @@ export const query = graphql`
 
 const Location = ({ data, pageContext }) => {
   const location = { ...data.markdownRemark.frontmatter }
-  const { ingredients } = pageContext
+  let { ingredients } = pageContext
   const isDesktop = useMediaQuery("(min-width: 500px)")
+
+  ingredients = ingredients.map(item => {
+    return { ...item.frontmatter }
+  })
+
+  const ingredientsByRarity = _.groupBy(ingredients, "rarity")
+
+  console.log("ingredientsByRarity")
+  console.log(ingredientsByRarity)
 
   return (
     <Layout>
@@ -71,25 +82,32 @@ const Location = ({ data, pageContext }) => {
         <div class="w-100">
           <h2>Ingredients</h2>
           <hr class="border-primary"></hr>
-          <ListGroup>
-            {ingredients &&
-              ingredients.map(item => {
-                const ing = { ...item.frontmatter }
-                return (
-                  <Link to={`/ingredients/${convertToSlug(ing.name)}`}>
-                    <ListGroup.Item action>
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{ing.name}</h5>
-                        {/*<small>3 days ago</small>*/}
-                      </div>
-                      <div class="d-flex w-100 justify-content-between">
-                        <p>Rarity: {ing.rarity}</p>
-                      </div>
-                    </ListGroup.Item>
-                  </Link>
-                )
-              })}
-          </ListGroup>
+          {["Common", "Uncommon", "Rare", "Very Rare", "Legendary"].map(
+            rarity => (
+              <div>
+                <h3>{rarity}</h3>
+                <ListGroup>
+                  {ingredientsByRarity &&
+                    ingredientsByRarity[rarity] &&
+                    ingredientsByRarity[rarity].map(ing => {
+                      return (
+                        <Link to={`/ingredients/${convertToSlug(ing.name)}`}>
+                          <ListGroup.Item action>
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">{ing.name}</h5>
+                              {/*<small>3 days ago</small>*/}
+                            </div>
+                            <div class="d-flex w-100 justify-content-between">
+                              <p>Rarity: {ing.rarity}</p>
+                            </div>
+                          </ListGroup.Item>
+                        </Link>
+                      )
+                    })}
+                </ListGroup>
+              </div>
+            )
+          )}
         </div>
       </Article>
     </Layout>
