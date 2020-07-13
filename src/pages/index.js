@@ -87,40 +87,6 @@ export default () => (
           online editor. To find out more click{" "}
           <Link to="/contribute/">here.</Link>
         </p>
-        <h3>Github</h3>
-        <hr class="border-primary"></hr>
-        <p>
-          Go to our{" "}
-          <a href="https://github.com/NikitaVr/dndcrafting" target="_blank">
-            Github
-          </a>{" "}
-          page and create a new branch, this is a way for you to add recipes and
-          then submit them to be reviewed.
-        </p>
-        <h3>Adding</h3>
-        <hr class="border-primary"></hr>
-        <p>
-          To add a new recipe, go to the file /data/recipes.json, and add a new
-          entry into the list.
-        </p>
-        <p>The file contains recipes that look like this </p>
-        <pre>
-          <code>
-            {`{
-              "title": "Lavender Tea",
-              "description": "A soothing tea with a light smell.",
-              "effects": ["+1d4 on next Wisdom Check"],
-              "image": "./images/lavenderTea.jpg",
-              "preparationTime": "🔥 Short Rest",
-              "ingredients": ["Water", "Lavender"],
-              "categories": ["Cooking"]
-            },`}
-          </code>
-        </pre>
-        <p>
-          To add a new recipe, just create a new entry in the list in the same
-          format.
-        </p>
       </Article>
     </Layout>
   </div>
