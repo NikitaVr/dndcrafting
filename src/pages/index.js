@@ -83,9 +83,9 @@ export default () => (
         <hr class="border-primary"></hr>
         <p>
           This project is Open Source, and anyone is welcome to contribute
-          ingredients, recipes, and locations. You will need to know a little
-          bit about how GitHub works, but besides that all you need to do is
-          just edit a JSON file
+          ingredients, recipes, and locations. Contributing is easy with an
+          online editor. To find out more click{" "}
+          <Link to="/contribute/">here.</Link>
         </p>
         <h3>Github</h3>
         <hr class="border-primary"></hr>
